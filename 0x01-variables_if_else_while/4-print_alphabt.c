@@ -2,15 +2,17 @@
 
 /**
  * main - Entry point
- * Description: upper and lowercase number
+ * Description: all alphabet except e and a
  * Return: 0
  */
+
 int main(void)
-{	char low, high;
+{	char low;
 	for (low = 'a'; low <= 'z'; low++)
-	{putchar(low); }
-	for (high = 'A'; high <= 'Z'; high++)
-	{putchar(high); }
+	{
+		if (low != 'e' && low != 'q')
+		putchar(low);
+	}
 	putchar('\n');
 	return (0);
 }

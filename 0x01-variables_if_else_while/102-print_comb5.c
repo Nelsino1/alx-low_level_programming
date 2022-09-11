@@ -17,8 +17,8 @@ int main(void)
 		{
 			if (num != num2 && num2 > num1)
 			{
-				putchar (num1);
-				puthcar (num2);
+				putchar(num1);
+				puthcar(num2);
 				if (num1 > '8' || num2 < '9')
 				{
 					putchar(',');

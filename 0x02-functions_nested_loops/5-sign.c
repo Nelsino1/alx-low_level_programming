@@ -2,7 +2,7 @@
 
 /**
  * print_sign - Print the sign of a number
- * @c: type in integer, can be negative or positive
+ * @n: is the int that will be use for argument of the function
  * Description: print +, 0, or - depending on number, along with return
  * Return: 1 if
  */

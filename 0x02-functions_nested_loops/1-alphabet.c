@@ -4,7 +4,7 @@
  * Description: printing alphabet
  * Return: 0
  */
-viod print_alphabet(void)
+void print_alphabet(void)
 {
 	int i;
 

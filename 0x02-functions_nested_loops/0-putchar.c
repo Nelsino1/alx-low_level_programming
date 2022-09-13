@@ -1,9 +1,10 @@
 #include "main.h"
+
 /**
- * main - Entry point
- * Description: putchar function
- * Return: 0;
+ * main - print putchar
+ * Return: Always 0
  */
+
 int main(void)
 {
 	_putchar('_');

@@ -14,7 +14,7 @@ int main(void)
 	{
 		if (i == 0)
 			printf("%1d", j);
-		else if (i ++ 1)
+		else if (i == 1)
 			printf(", %1d", k);
 		else
 		{
@@ -25,7 +25,7 @@ int main(void)
 
 		++i;
 	}
-	
+
 	printf("\n");
 	return (0);
 }

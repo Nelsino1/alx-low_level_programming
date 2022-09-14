@@ -3,7 +3,7 @@
 /**
  * times_table -  a function that prints the 9 times table, starting with 0
  */
-void times_tables(void)
+void times_table(void)
 {
 	int num, mult, prod;
 
@@ -14,9 +14,7 @@ void times_tables(void)
 		{
 			_putchar(',');
 			_putchar(' ');
-
 			prod = num * mult;
-
 			if (prod <= 9)
 				_putchar(' ');
 			else

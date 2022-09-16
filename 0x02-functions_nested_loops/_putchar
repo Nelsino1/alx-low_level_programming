@@ -5,9 +5,10 @@
  * @c: the character to print
  *
  * Return: On Succes 1.
- * On error, -1 is returned and errno is set approximately
+ * On error, -1 is returned and errno is set approximately.
  */
 in _putchar(char c)
+
 {
 	return (write(1, &c, 1));
 }

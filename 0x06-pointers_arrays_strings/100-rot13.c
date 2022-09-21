@@ -1,35 +1,46 @@
-#include "main.h"
+#include "holberton.h"
 
 /**
- * _atoi - converts a string to an integer
- * @s: input string.
- * Return: integer.
+ * rot13 - Encodes a string using rot13.
+ * @str: The string to be encoded.
+ *
+ * Return: A pointer to the encoded string.
  */
-int _atoi(char *s)
+char *rot13(char *str)
 {
-	unsigned int count = 0, size = 0, oi = 0, pn = 1, m = 1, i;
+	int indx1 = 0, indx2;
+	char alphabet[52] = {'A', 'B', 'C', 'D', 'E', 'F',
+		'G', 'H', 'I', 'J', 'K', 'L',
+		'M', 'N', 'O', 'P', 'Q', 'R',
+		'S', 'T', 'U', 'V', 'W', 'X',
+		'Y', 'Z', 'a', 'b', 'c', 'd',
+		'e', 'f', 'g', 'h', 'i', 'j',
+		'k', 'l', 'm', 'n', 'o', 'p',
+		'q', 'r', 's', 't', 'u', 'v',
+		'w', 'x', 'y', 'z'};
+	char rot13key[52] = {'N', 'O', 'P', 'Q', 'R', 'S',
+		'T', 'U', 'V', 'W', 'X', 'Y',
+		'Z', 'A', 'B', 'C', 'D', 'E',
+		'F', 'G', 'H', 'I', 'J', 'K',
+		'L', 'M', 'n', 'o', 'p', 'q',
+		'r', 's', 't', 'u', 'v', 'w',
+		'x', 'y', 'z', 'a', 'b', 'c',
+		'd', 'e', 'f', 'g', 'h', 'i',
+		'j', 'k', 'l', 'm'};
 
-	while (*(s + count) != '\0')
+	while (str[indx1])
 	{
-		if (size > 0 && (*(s + count) < '0' || *(s + count) > '9'))
-			break;
-
-		if (*(s + count) == '-')
-			pn *= -1;
-
-		if ((*(s + count) >= '0') && (*(s + count) <= '9'))
+		for (indx2 = 0; indx2 < 52; indx2++)
 		{
-			if (size > 0)
-				m *= 10;
-			size++;
+			if (str[indx1] == alphabet[indx2])
+			{
+				str[indx1] = rot13key[indx2];
+				break;
+			}
 		}
-		count++;
-	}
 
-	for (i = count - size; i < count; i++)
-	{
-		oi = oi + ((*(s + i) - 48) * m);
-		m /= 10;
+		indx1++;
+
 	}
-	return (oi * pn);
+	return (str);
 }

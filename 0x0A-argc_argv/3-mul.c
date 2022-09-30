@@ -1,28 +1,18 @@
 #include <stdio.h>
-#include "holberton.h"
-
+#include <stdlib.h>
 /**
- * main - multiplies two numbers
- * @argc: number of arguments
- * @argv[]: array of arguments
- *
- * Return: 0 (Success), 1 (Error)
+ * main - multiplies two numbers.
+ * @argc: number of command line arguments.
+ * @argv: array that contains the program command line arguments.
+ * Return: 0 - success.
  */
-int main (int argc, char *argv[])
+int main(int argc, char *argv[])
 {
-	int result, num1, num2;
-
-	if (argc < 3 || argc > 3)
+	if (argc != 3)
 	{
 		printf("Error\n");
 		return (1);
 	}
-
-	num1 = *argv[1] - '0';
-	num2 = *argv[2] -'0';
-	result = num1 * num2;
-
-	printf("%d\n", result);
-
+	printf("%d\n", atoi(argv[1]) * atoi(argv[2]));
 	return (0);
 }

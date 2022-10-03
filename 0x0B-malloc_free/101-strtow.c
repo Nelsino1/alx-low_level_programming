@@ -22,7 +22,7 @@ int wordcount(char *str)
 
 	while (*str != '\0')
 	{
-		/*skip spaces*/
+		
 		if (*str == ' ')
 			str++;
 		else

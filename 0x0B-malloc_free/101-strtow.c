@@ -9,7 +9,7 @@
 
 /**
  * *wordcount - get word count from string
- * 		without spaces
+ * without spaces
  *
  * @str: string to count words present
  *
@@ -22,7 +22,7 @@ int wordcount(char *str)
 
 	while (*str != '\0')
 	{
-		
+
 		if (*str == ' ')
 			str++;
 		else

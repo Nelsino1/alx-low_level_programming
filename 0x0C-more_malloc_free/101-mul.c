@@ -1,6 +1,7 @@
 #include "main.h"
 #include <stdlib.h>
 #include <stdio.h>
+#include <ctype.h>
 
 int is_digit(char *s);
 int _strlen(char *s);

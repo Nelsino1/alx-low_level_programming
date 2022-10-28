@@ -10,6 +10,7 @@ where b is pointing to a string of 0 and 1 chars
 Return: the converted number, or 0 if
 there is one or more chars in the string b that is not 0 or 1
 b is NULL
+
 julien@ubuntu:~/0x14. Binary$ cat 0-main.c
 #include <stdio.h>
 #include main.h
